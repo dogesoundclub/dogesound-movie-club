@@ -1561,4 +1561,17 @@ contract KIP37Mintable is KIP37, MinterRole {
 
 contract DogeSoundMovieClub is KIP37, KIP37Burnable, KIP37Pausable, KIP37Mintable {
     constructor() public KIP37("") {}
+
+    function bulkTransfer(uint256 id, address[] calldata tos) external {
+        uint256 length = tos.length;
+        for (uint256 i = 0; i < length; i += 1) {
+            safeTransferFrom(
+                msg.sender,
+                tos[i],
+                id,
+                1,
+                ""
+            );
+        }
+    }
 }
