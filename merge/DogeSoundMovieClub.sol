@@ -1559,6 +1559,6 @@ contract KIP37Mintable is KIP37, MinterRole {
     }
 }
 
-contract DogeSoundMovieClip is KIP37, KIP37Burnable, KIP37Pausable, KIP37Mintable {
+contract DogeSoundMovieClub is KIP37, KIP37Burnable, KIP37Pausable, KIP37Mintable {
     constructor() public KIP37("") {}
 }
